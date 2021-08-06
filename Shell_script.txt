@@ -1,0 +1,23 @@
+awk -v loop=10 -v multiply=10 'BEGIN{
+  srand()
+  do {
+    numb = 1 + int(rand() * multiply)
+    if (!(numb in array)) {
+       print numb
+       array[numb] = 1
+       count++
+    }
+  } while (count<loop)
+}'
+
+
+For this task i decide to use awk because this give us much more flexibility when we work with data type
+
+1)In the first line i decide we declare two varibles loop and multiply
+  Loop shows us the lengt of our loop and multiply uses for  multipling random value rand() 
+2) Rand function generate random, but if we want to have this randomity every time while we generate our shell script
+   we have to use srand() function
+3) On the third step we creating loop which will be break when 'count' will be equal to 10
+4) Numb is equal to 1 + (randomly generated number between 0.0 and 0.9n and by multupling it to 10 we get fractional number,
+ by using int() function transform it to integer value) 
+5) On the next step we check is numb in  array, and if not we add this number to array and increase count by one
