@@ -1,0 +1,8 @@
+SSL offloading is the process of removing the SSL-based encryption from incoming traffic to avoid http server overload by 
+processing burden of encrypting and decrypting data. 
+SSL and its successor  TLS used for data encrypting across the Internet.
+This protocols uses SSL handshake which consist of the several steps, both sites agreed on cipher suite, client side check server'server
+certificate, after that both sides calcuate DH for key material. All this steps load CPU, and the main monitoring metric is going to be CPU unit
+Depend on what kind of traffic we handle, there could be necessity for network monitoring in case of handling huge amount of data (video traffic)
+Also we should add expiration metric date for SSL certificates, for avoid  using an expired certificate . In conclusion want to say first of all CPU and Certification exparation date
+going to be monitored
